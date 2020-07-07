@@ -12,7 +12,15 @@ pool:
 steps:
 - task: Maven@3
   inputs:
-    mavenPomFile: 'https://github.com/Laharivegiraju22/mvc/tree/master/MyStayApplication/pom.xml'
+    mavenPomFile: 'pom.xml'
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'mvc/MyStayApplication/pom.xml'
+   
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
