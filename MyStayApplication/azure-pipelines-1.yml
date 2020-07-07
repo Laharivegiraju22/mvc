@@ -10,9 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'mvc/MyStayApplication/pom.xml'
